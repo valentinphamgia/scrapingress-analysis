@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "scrapingress-public"
+version = "0.1.0"
+description = "Synthetic mobility data and reproducible behavioural clustering"
+requires-python = ">=3.9"
+dependencies = [
+  "numpy==1.26.4", "pandas==2.3.3", "scipy==1.13.1",
+  "scikit-learn==1.6.1", "matplotlib==3.9.4"
+]
+
+[project.scripts]
+scrapingress-demo = "scrapingress.experiment:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
